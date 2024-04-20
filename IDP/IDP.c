@@ -334,3 +334,326 @@ void RmwLogTransform(uint8_t* pGryImg, int width, int height)
     // step.5-------------结束------------------------------//
     return; // 函数结束
 }
+
+//基于列积分的快速均值滤波
+//原始灰度图像
+//图像的宽度和高度
+//滤波邻域：M列N行
+//结果图像
+void RmwAvrFilterBySumCol(uint8_t* pGryImg,int width, int height,int M, int N,uint8_t* pResImg) 
+{
+    uint8_t* pAdd, * pDel, * pRes;
+    int halfx, halfy;
+    int x, y;
+    int sum, c;
+    int sumCol[4096]; // 约定图像宽度不大于4096
+
+    // step.1------------初始化--------------------------//
+    M = M / 2 * 2 + 1; // 奇数化
+    N = N / 2 * 2 + 1; // 奇数化
+    halfx = M / 2; // 滤波器的半径x
+    halfy = N / 2; // 滤波器的半径y
+    c = (1 << 23) / (M * N); // 乘法因子
+    memset(sumCol, 0, sizeof(int) * width);
+    for (y = 0, pAdd = pGryImg; y < N; y++) {
+        for (x = 0; x < width; x++) sumCol[x] += *(pAdd++);
+    }
+    // step.2------------滤波----------------------------//
+    for (y = halfy, pRes = pResImg + y * width, pDel = pGryImg; y < height - halfy; y++) {
+        // 初值
+        for (sum = 0, x = 0; x < M; x++) sum += sumCol[x];
+        // 滤波
+        pRes += halfx; // 跳过左侧
+        for (x = halfx; x < width - halfx; x++) {
+            // 求灰度均值
+            // *(pRes++)=sum/(N*M);
+            *(pRes++) = (sum * c) >> 23; // 用整数乘法和移位代替除法
+            // 换列,更新灰度和
+            sum -= sumCol[x - halfx]; // 减左边列
+            sum += sumCol[x + halfx + 1]; // 加右边列
+        }
+        pRes += halfx; // 跳过右侧
+        // 换行,更新sumCol
+        for (x = 0; x < width; x++) {
+            sumCol[x] -= *(pDel++); // 减上一行
+            sumCol[x] += *(pAdd++); // 加下一行
+        }
+    }
+    // step.3------------返回----------------------------//
+    return;
+}
+
+//基于列积分的积分图实现
+//pGryImg, // 原始灰度图像
+//width,       // 图像的宽度 
+//height,      // 图像的高度
+//pSumImg     // 计算得到的积分图
+void RmwDoSumGryImg(uint8_t* pGryImg,int width,int height, int* pSumImg)
+{
+    uint8_t* pGry;
+    int* pRes;
+    int x, y;
+    int sumCol[4096]; // 约定图像宽度不大于4096
+
+    memset(sumCol, 0, sizeof(int) * width);
+    for (y = 0, pGry = pGryImg, pRes = pSumImg; y < height; y++)
+    {
+        // 最左侧像素的特别处理
+        sumCol[0] += *(pGry++);
+        *(pRes++) = sumCol[0];
+        // 正常处理
+        for (x = 1; x < width; x++)
+        {
+            sumCol[x] += *(pGry++);       // 更新列积分
+            int temp = *(pRes - 1);
+            *(pRes++) = temp + sumCol[x];
+        }
+    }
+    return;
+}
+
+//基于SSE的积分图实现
+//pGryImg原始灰度图像
+//width图像的宽度，必须是4的倍数
+//height图像的高度
+//pSumImg计算得到的积分图
+void RmwDoSumGryImg_SSE(uint8_t* pGryImg,int width,int height,int* pSumImg)
+{
+    int sumCol[4096]; //约定图像宽度不大于4096
+    __m128i* pSumSSE, A;
+    uint8_t* pGry;
+    int* pRes;
+    int x, y;
+
+    memset(sumCol, 0, sizeof(int) * width);
+    for (y = 0, pGry = pGryImg, pRes = pSumImg; y < height; y++)
+    {
+        // 0:需要特别处理
+        sumCol[0] += *(pGry++);
+        *(pRes++) = sumCol[0];
+        // 1
+        sumCol[1] += *(pGry++);
+        *(pRes++) = *(pRes - 1) + sumCol[1];
+        // 2
+        sumCol[2] += *(pGry++);
+        *(pRes++) = *(pRes - 1) + sumCol[2];
+        // 3
+        sumCol[3] += *(pGry++);
+        *(pRes++) = *(pRes - 1) + sumCol[3];
+        // [4...width-1]
+        for (x = 4, pSumSSE = (__m128i*)(sumCol + 4); x < width; x += 4, pGry += 4)
+        {
+            // 把变量的低32位(有4个8位整数组成)转换成32位的整数
+            A = _mm_cvtepu8_epi32(_mm_loadl_epi64((__m128i*)pGry));
+            // 4个32位的整数相加
+            *(pSumSSE++) = _mm_add_epi32(*pSumSSE, A);
+            // 递推
+            *(pRes++) = *(pRes - 1) + sumCol[x + 0];
+            *(pRes++) = *(pRes - 1) + sumCol[x + 1];
+            *(pRes++) = *(pRes - 1) + sumCol[x + 2];
+            *(pRes++) = *(pRes - 1) + sumCol[x + 3];
+        }
+    }
+    return;
+}
+
+//基于积分图的快速均值滤波
+//pSumImg计算得到的积分图
+//width,height,图像的宽度和高度
+//M, N,滤波邻域：M列N行
+//pResImg 结果图像
+void RmwAvrFilterBySumImg(int* pSumImg,int width, int height,int M, int N,uint8_t* pResImg)
+{
+    // 没有对边界上邻域不完整的像素进行处理，可以采用变窗口的策略
+    int* pY1, * pY2;
+    uint8_t* pRes;
+    int halfx, halfy;
+    int y, x1, x2;
+    int sum, c;
+
+    // step.1------------初始化--------------------------//
+    M = M / 2 * 2 + 1; // 奇数化
+    N = N / 2 * 2 + 1; // 奇数化
+    halfx = M / 2;      // 滤波器的半径x
+    halfy = N / 2;      // 滤波器的半径y
+    c = (1 << 23) / (M * N); // 乘法因子
+    // step.2------------滤波----------------------------//
+    for (y = halfy + 1, pRes = pResImg + y * width, pY1 = pSumImg, pY2 = pSumImg + N * width;
+        y < height - halfy;
+        y++, pY1 += width, pY2 += width)
+    {
+        pRes += halfx + 1; // 跳过左侧
+        for (x1 = 0, x2 = M; x2 < width; x1++, x2++) // 可以简化如此，但不太容易读
+        {
+            sum = *(pY2 + x2) - *(pY2 + x1) - *(pY1 + x2) + *(pY1 + x1);
+            *(pRes++) = (uint8_t)((sum * c) >> 23); // 用整数乘法和移位代替除法
+        }
+        pRes += halfx; // 跳过右侧
+    }
+    // step.3------------返回----------------------------//
+    return;
+}
+
+void GetMedianGry(int* histogram, int N, int* medGry)
+{
+    int g;
+    int num;
+
+    // step.1-------------求灰度中值------------------------//
+    num = 0;
+    for (g = 0; g < 256; g++)
+    {
+        num += histogram[g];
+        if (2 * num > N) break;  //num>N/2
+    }
+    *medGry = g;
+    // step.2-------------结束------------------------------//
+    return;
+}
+
+//中值滤波
+//pGryImg：指向待处理灰度图像数据的指针。
+//width、height：表示图像的宽度和高度。
+//M、N：分别表示中值滤波器的水平和垂直邻域大小（以像素为单位）。
+//pResImg：指向存储结果图像数据的指针。
+double RmwMedianFilter(uint8_t* pGryImg, int width, int height, int M, int N, uint8_t* pResImg) 
+{
+    uint8_t* pCur, * pRes;
+    int halfx, halfy, x, y, i, j, y1, y2;
+    int histogram[256];
+    int wSize, j1, j2;
+    int num, med, v;
+    int dbgCmpTimes = 0; // 搜索中值所需比较次数的调试
+
+    M = M / 2 * 2 + 1; // 奇数化
+    N = N / 2 * 2 + 1; // 奇数化
+    halfx = M / 2;      // x半径
+    halfy = N / 2;      // y半径
+    wSize = (halfx * 2 + 1) * (halfy * 2 + 1); // 邻域内像素总个数
+
+    for (y = halfy, pRes = pResImg + y * width; y < height - halfy; y++) {
+        // step.1----初始化直方图
+        y1 = y - halfy;
+        y2 = y + halfy;
+        memset(histogram, 0, sizeof(int) * 256);
+
+        for (i = y1, pCur = pGryImg + i * width; i <= y2; i++, pCur += width) {
+            for (j = 0; j < halfx * 2 + 1; j++) {
+                histogram[*(pCur + j)]++;
+            }
+        }
+
+        // step.2-----初始化中值
+        num = 0; // 记录着灰度值从0到中值的个数
+        for (i = 0; i < 256; i++) {
+            num += histogram[i];
+            if (num * 2 > wSize) {
+                med = i;
+                break;
+            }
+        }
+
+        // 滤波
+        pRes += halfx; // 没有处理图像左边界侧的像素
+        for (x = halfx; x < width - halfx; x++) {
+            // 赋值
+            *(pRes++) = med;
+
+            // step.3-----直方图递推: 减去当前邻域最左边的一列,添加邻域右侧的一个新列
+            j1 = x - halfx;     // 最左边列
+            j2 = x + halfx + 1; // 右边的新列
+
+            for (i = y1, pCur = pGryImg + i * width; i <= y2; i++, pCur += width) {
+                // 减去最左边列
+                v = *(pCur + j1);
+                histogram[v]--;  // 更新直方图
+                if (v <= med) num--; // 更新num
+
+                // 添加右边的新列
+                v = *(pCur + j2);
+                histogram[v]++; // 更新直方图
+                if (v <= med) num++; // 更新num
+            }
+
+            // step.4-----更新中值
+            if (num * 2 < wSize) { // 到上次中值med的个数不够了,则med要变大
+                for (med = med + 1; med < 256; med++) {
+                    dbgCmpTimes += 2; // 总的比较次数,调试用
+                    num += histogram[med];
+                    if (num * 2 > wSize) break;
+                }
+                dbgCmpTimes += 1; // 总的比较次数,调试用
+            }
+            else { // 到上次中值med的个数多了,则med要变小
+                while ((num - histogram[med]) * 2 > wSize) { // 若减去后,仍变小
+                    dbgCmpTimes++; // 总的比较次数,调试用
+                    num -= histogram[med];
+                    med--;
+                }
+                dbgCmpTimes += 2; // 总的比较次数,调试用
+            }
+        }
+        pRes += halfx; // 没有处理图像右边界侧的像素
+    }
+    // 返回搜索中值需要的平均比较次数
+    return dbgCmpTimes * 1.0 / ((width - halfx * 2) * (height - halfy * 2));
+}
+
+//二值滤波
+//pBinImg,  原始二值图像
+// width, height,图像的宽度和高度
+// M, N, 滤波邻域：M列N行
+// threshold, 灰度阈值,大于等于该值时结果赋255
+// pResImg 结果图像
+void RmwBinImgFilter(uint8_t* pBinImg,int width, int height,int M, int N,double threshold,uint8_t* pResImg )
+{
+    // 没有对边界上邻域不完整的像素进行处理，可以采用变窗口的策略
+    uint8_t* pAdd, * pDel, * pRes;
+    int halfx, halfy;
+    int x, y, sum, sumThreshold;
+    int sumCol[4096]; //约定图像宽度不大于4096
+
+    // step.1------------初始化--------------------------//
+    M = M / 2 * 2 + 1; //奇数化
+    N = N / 2 * 2 + 1; //奇数化
+    halfx = M / 2; //滤波器的x半径
+    halfy = N / 2; //滤波器的y半径
+    sumThreshold = max(1, (int)(threshold * M * N)); //转换成邻域内灰度值之和的阈值
+    memset(sumCol, 0, sizeof(int) * width);
+    for (y = 0, pAdd = pBinImg; y < N; y++)
+    {
+        for (x = 0; x < width; x++)
+            sumCol[x] += *(pAdd++);
+    }
+    // step.2------------滤波----------------------------//
+    for (y = halfy, pRes = pResImg + y * width, pDel = pBinImg; y < height - halfy; y++)
+    {
+        //初值
+        for (sum = 0, x = 0; x < M; x++)
+            sum += sumCol[x];
+        //滤波
+        pRes += halfx; //跳过左侧
+        for (x = halfx; x < width - halfx; x++)
+        {
+            //求灰度均值
+            /*if (sum>=sumThreshold)
+            {
+                *(pRes++) = 255;
+            }
+            else  *(pRes++) = 0;*/
+            *(pRes++) = (sum >= sumThreshold) * 255; //请理解这个表达式的含义
+            //换列,更新灰度和
+            sum -= sumCol[x - halfx];     //减左边列
+            sum += sumCol[x + halfx + 1]; //加右边列
+        }
+        pRes += halfx; //跳过右侧
+        //换行,更新sumCol
+        for (x = 0; x < width; x++)
+        {
+            sumCol[x] -= *(pDel++); //减上一行
+            sumCol[x] += *(pAdd++); //加下一行
+        }
+    }
+    // step.3------------返回----------------------------//
+    return;
+}
