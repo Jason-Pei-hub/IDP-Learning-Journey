@@ -119,7 +119,7 @@ uint8_t* readColorBMP(const char* filename, int* width, int* height)
     uint8_t bmpHeader[54];
     fread(bmpHeader, 1, 54, file);
 
-    // 从文件头部提取图像宽度和高度信息
+    // 从文件头部提取图像宽度和高度信息方便传入主程序
     *width = *(int*)&bmpHeader[18];
     *height = *(int*)&bmpHeader[22];
 
