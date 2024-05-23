@@ -4,7 +4,7 @@
 
 int main() 
 {
-    const char* Filename = "testme.bmp";
+    const char* Filename = "test.bmp";
 
     int width, height;
 
@@ -41,7 +41,7 @@ int main()
 
     //GetBrightContrast(his, &liangdu1, &duibidu1);
     // 执行对灰度图像的操作
-    RmwHistogramEqualize(grayScaleImageData,width, height);//直方图均衡化
+    //RmwHistogramEqualize(grayScaleImageData,width, height);//直方图均衡化
     //LinearStretchDemo(grayScaleImageData, width, height,3,-60);
     //uint8_t* pResImg = (uint8_t*)malloc(width * height);
 
@@ -70,7 +70,7 @@ int main()
 
     // 保存8位灰度图像数据为BMP文件
     saveGrayScaleBMP("testout111.bmp", grayScaleImageData, width, height);
-    saveColorBMP("testout222.bmp", ImageData ,width,height);
+    //saveColorBMP("testout222.bmp", ImageData ,width,height);
     //saveGrayScaleBMP("endout111.bmp", pResImg, width, height);
     
 
