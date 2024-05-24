@@ -4,7 +4,7 @@
 
 int main() 
 {
-    const char* Filename = "test.bmp";
+    const char* Filename = "input/test.bmp";
 
     int width, height;
 
@@ -69,7 +69,7 @@ int main()
     //GetBrightContrast(hisout, &liangdu2, &duibidu2);
 
     // 保存8位灰度图像数据为BMP文件
-    saveGrayScaleBMP("testout111.bmp", grayScaleImageData, width, height);
+    saveGrayScaleBMP("output/testout111.bmp", grayScaleImageData, width, height);
     //saveColorBMP("testout222.bmp", ImageData ,width,height);
     //saveGrayScaleBMP("endout111.bmp", pResImg, width, height);
     
