@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <nmmintrin.h>
+#include <SDL.h>
  
 uint8_t* readGrayScaleBMP(const char* filename, int* width, int* height);//读取8位灰度图片
 void saveGrayScaleBMP(const char* filename, const uint8_t* imageData, int width, int height);// 将8位灰度图像数据保存为BMP文件
