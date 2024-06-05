@@ -1,0 +1,9 @@
+﻿  IDP.c
+E:\code\IDP-Learning-Journey\图像平滑\图像特性的计算_code\code\code\IDP.c(242,18): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+E:\code\IDP-Learning-Journey\图像平滑\图像特性的计算_code\code\code\IDP.c(265,5): warning C4013: “memset”未定义；假设外部返回 int
+  main.c
+E:\code\IDP-Learning-Journey\图像平滑\图像特性的计算_code\code\code\main.c(6,1): warning C4026: 使用形参表声明的函数
+E:\code\IDP-Learning-Journey\图像平滑\图像特性的计算_code\code\code\main.c(27,5): warning C4013: “displayHistogram”未定义；假设外部返回 int
+E:\code\IDP-Learning-Journey\图像平滑\图像特性的计算_code\code\code\main.c(41,5): warning C4013: “memcpy”未定义；假设外部返回 int
+E:\code\IDP-Learning-Journey\图像平滑\图像特性的计算_code\code\code\main.c(92,15): warning C4090: “函数”: 不同的“const”限定符
+  code.vcxproj -> E:\code\IDP-Learning-Journey\图像平滑\图像特性的计算_code\code\x64\Debug\code.exe

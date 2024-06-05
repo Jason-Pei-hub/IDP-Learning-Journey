@@ -1,0 +1,6 @@
+﻿  ChainCode.c
+  IDP.c
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(236,18): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(259,5): warning C4013: “memset”未定义；假设外部返回 int
+  正在生成代码...
+  code.vcxproj -> E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\x64\Debug\code.exe

@@ -1,0 +1,4 @@
+﻿  test_histogram.c
+E:\code\IDP-Learning-Journey\图像统计特性计算\code\code\test_histogram.c(91,5): warning C4013: “memset”未定义；假设外部返回 int
+E:\code\IDP-Learning-Journey\图像统计特性计算\code\code\test_histogram.c(180,1): warning C4026: 使用形参表声明的函数
+  code.vcxproj -> E:\code\IDP-Learning-Journey\图像统计特性计算\code\x64\Debug\code.exe

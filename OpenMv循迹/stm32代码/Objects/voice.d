@@ -1,0 +1,66 @@
+.\objects\voice.o: Hardware\Voice\voice.c
+.\objects\voice.o: Hardware\Voice\voice.h
+.\objects\voice.o: .\Start\stm32f10x.h
+.\objects\voice.o: .\Start\core_cm3.h
+.\objects\voice.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\voice.o: .\Start\system_stm32f10x.h
+.\objects\voice.o: .\User\stm32f10x_conf.h
+.\objects\voice.o: .\Library\stm32f10x_adc.h
+.\objects\voice.o: .\Start\stm32f10x.h
+.\objects\voice.o: .\Library\stm32f10x_bkp.h
+.\objects\voice.o: .\Library\stm32f10x_can.h
+.\objects\voice.o: .\Library\stm32f10x_cec.h
+.\objects\voice.o: .\Library\stm32f10x_crc.h
+.\objects\voice.o: .\Library\stm32f10x_dac.h
+.\objects\voice.o: .\Library\stm32f10x_dbgmcu.h
+.\objects\voice.o: .\Library\stm32f10x_dma.h
+.\objects\voice.o: .\Library\stm32f10x_exti.h
+.\objects\voice.o: .\Library\stm32f10x_flash.h
+.\objects\voice.o: .\Library\stm32f10x_fsmc.h
+.\objects\voice.o: .\Library\stm32f10x_gpio.h
+.\objects\voice.o: .\Library\stm32f10x_i2c.h
+.\objects\voice.o: .\Library\stm32f10x_iwdg.h
+.\objects\voice.o: .\Library\stm32f10x_pwr.h
+.\objects\voice.o: .\Library\stm32f10x_rcc.h
+.\objects\voice.o: .\Library\stm32f10x_rtc.h
+.\objects\voice.o: .\Library\stm32f10x_sdio.h
+.\objects\voice.o: .\Library\stm32f10x_spi.h
+.\objects\voice.o: .\Library\stm32f10x_tim.h
+.\objects\voice.o: .\Library\stm32f10x_usart.h
+.\objects\voice.o: .\Library\stm32f10x_wwdg.h
+.\objects\voice.o: .\Library\misc.h
+.\objects\voice.o: .\System\sys\sys.h
+.\objects\voice.o: .\FreeRTOS\inc\freertos.h
+.\objects\voice.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\voice.o: .\FreeRTOS\FreeRTOSConfig.h
+.\objects\voice.o: .\FreeRTOS\inc\projdefs.h
+.\objects\voice.o: .\FreeRTOS\inc\portable.h
+.\objects\voice.o: .\FreeRTOS\inc\deprecated_definitions.h
+.\objects\voice.o: .\FreeRTOS\port\portmacro.h
+.\objects\voice.o: .\FreeRTOS\inc\mpu_wrappers.h
+.\objects\voice.o: .\FreeRTOS\inc\task.h
+.\objects\voice.o: .\FreeRTOS\inc\list.h
+.\objects\voice.o: .\FreeRTOS\inc\queue.h
+.\objects\voice.o: .\FreeRTOS\inc\semphr.h
+.\objects\voice.o: .\FreeRTOS\inc\event_groups.h
+.\objects\voice.o: .\FreeRTOS\inc\timers.h
+.\objects\voice.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\voice.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\voice.o: .\System\delay\delay.h
+.\objects\voice.o: .\System\sys\sys.h
+.\objects\voice.o: .\Hardware\OLED\OLED.h
+.\objects\voice.o: .\Hardware\MyTask\mytask.h
+.\objects\voice.o: .\Hardware\Servos\servos.h
+.\objects\voice.o: .\Hardware\Led\led.h
+.\objects\voice.o: .\Hardware\Vbatt\vbatt.h
+.\objects\voice.o: .\Hardware\Pwm\pwm.h
+.\objects\voice.o: .\Hardware\Motor\motor.h
+.\objects\voice.o: .\Hardware\Encoder\encoder.h
+.\objects\voice.o: .\Hardware\Pid\pid.h
+.\objects\voice.o: .\Hardware\MyTimer\mytimer.h
+.\objects\voice.o: .\System\usart\usart.h
+.\objects\voice.o: .\Hardware\Voice\voice.h
+.\objects\voice.o: .\Net\device\esp8266.h
+.\objects\voice.o: D:\A STM32\ARM\ARMCC\Bin\..\include\string.h
+.\objects\voice.o: .\Net\onenet\onenet.h
+.\objects\voice.o: .\Net\cJSON\cJSON.h

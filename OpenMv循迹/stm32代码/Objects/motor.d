@@ -1,0 +1,63 @@
+.\objects\motor.o: Hardware\Motor\motor.c
+.\objects\motor.o: Hardware\Motor\motor.h
+.\objects\motor.o: .\Start\stm32f10x.h
+.\objects\motor.o: .\Start\core_cm3.h
+.\objects\motor.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\motor.o: .\Start\system_stm32f10x.h
+.\objects\motor.o: .\User\stm32f10x_conf.h
+.\objects\motor.o: .\Library\stm32f10x_adc.h
+.\objects\motor.o: .\Start\stm32f10x.h
+.\objects\motor.o: .\Library\stm32f10x_bkp.h
+.\objects\motor.o: .\Library\stm32f10x_can.h
+.\objects\motor.o: .\Library\stm32f10x_cec.h
+.\objects\motor.o: .\Library\stm32f10x_crc.h
+.\objects\motor.o: .\Library\stm32f10x_dac.h
+.\objects\motor.o: .\Library\stm32f10x_dbgmcu.h
+.\objects\motor.o: .\Library\stm32f10x_dma.h
+.\objects\motor.o: .\Library\stm32f10x_exti.h
+.\objects\motor.o: .\Library\stm32f10x_flash.h
+.\objects\motor.o: .\Library\stm32f10x_fsmc.h
+.\objects\motor.o: .\Library\stm32f10x_gpio.h
+.\objects\motor.o: .\Library\stm32f10x_i2c.h
+.\objects\motor.o: .\Library\stm32f10x_iwdg.h
+.\objects\motor.o: .\Library\stm32f10x_pwr.h
+.\objects\motor.o: .\Library\stm32f10x_rcc.h
+.\objects\motor.o: .\Library\stm32f10x_rtc.h
+.\objects\motor.o: .\Library\stm32f10x_sdio.h
+.\objects\motor.o: .\Library\stm32f10x_spi.h
+.\objects\motor.o: .\Library\stm32f10x_tim.h
+.\objects\motor.o: .\Library\stm32f10x_usart.h
+.\objects\motor.o: .\Library\stm32f10x_wwdg.h
+.\objects\motor.o: .\Library\misc.h
+.\objects\motor.o: .\System\sys\sys.h
+.\objects\motor.o: .\FreeRTOS\inc\freertos.h
+.\objects\motor.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\motor.o: .\FreeRTOS\FreeRTOSConfig.h
+.\objects\motor.o: .\FreeRTOS\inc\projdefs.h
+.\objects\motor.o: .\FreeRTOS\inc\portable.h
+.\objects\motor.o: .\FreeRTOS\inc\deprecated_definitions.h
+.\objects\motor.o: .\FreeRTOS\port\portmacro.h
+.\objects\motor.o: .\FreeRTOS\inc\mpu_wrappers.h
+.\objects\motor.o: .\FreeRTOS\inc\task.h
+.\objects\motor.o: .\FreeRTOS\inc\list.h
+.\objects\motor.o: .\FreeRTOS\inc\queue.h
+.\objects\motor.o: .\FreeRTOS\inc\semphr.h
+.\objects\motor.o: .\FreeRTOS\inc\event_groups.h
+.\objects\motor.o: .\FreeRTOS\inc\timers.h
+.\objects\motor.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\motor.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\motor.o: .\System\delay\delay.h
+.\objects\motor.o: .\System\sys\sys.h
+.\objects\motor.o: .\Hardware\OLED\OLED.h
+.\objects\motor.o: .\Hardware\MyTask\mytask.h
+.\objects\motor.o: .\Hardware\Servos\servos.h
+.\objects\motor.o: .\Hardware\Pwm\pwm.h
+.\objects\motor.o: .\Hardware\Motor\motor.h
+.\objects\motor.o: .\Hardware\Encoder\encoder.h
+.\objects\motor.o: .\Hardware\Pid\pid.h
+.\objects\motor.o: .\Hardware\MyTimer\mytimer.h
+.\objects\motor.o: .\System\usart\usart.h
+.\objects\motor.o: .\Net\device\esp8266.h
+.\objects\motor.o: D:\A STM32\ARM\ARMCC\Bin\..\include\string.h
+.\objects\motor.o: .\Net\onenet\onenet.h
+.\objects\motor.o: .\Net\cJSON\cJSON.h

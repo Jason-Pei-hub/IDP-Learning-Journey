@@ -1,0 +1,62 @@
+.\objects\sys.o: System\sys\sys.c
+.\objects\sys.o: System\sys\sys.h
+.\objects\sys.o: .\Start\stm32f10x.h
+.\objects\sys.o: .\Start\core_cm3.h
+.\objects\sys.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sys.o: .\Start\system_stm32f10x.h
+.\objects\sys.o: .\User\stm32f10x_conf.h
+.\objects\sys.o: .\Library\stm32f10x_adc.h
+.\objects\sys.o: .\Start\stm32f10x.h
+.\objects\sys.o: .\Library\stm32f10x_bkp.h
+.\objects\sys.o: .\Library\stm32f10x_can.h
+.\objects\sys.o: .\Library\stm32f10x_cec.h
+.\objects\sys.o: .\Library\stm32f10x_crc.h
+.\objects\sys.o: .\Library\stm32f10x_dac.h
+.\objects\sys.o: .\Library\stm32f10x_dbgmcu.h
+.\objects\sys.o: .\Library\stm32f10x_dma.h
+.\objects\sys.o: .\Library\stm32f10x_exti.h
+.\objects\sys.o: .\Library\stm32f10x_flash.h
+.\objects\sys.o: .\Library\stm32f10x_fsmc.h
+.\objects\sys.o: .\Library\stm32f10x_gpio.h
+.\objects\sys.o: .\Library\stm32f10x_i2c.h
+.\objects\sys.o: .\Library\stm32f10x_iwdg.h
+.\objects\sys.o: .\Library\stm32f10x_pwr.h
+.\objects\sys.o: .\Library\stm32f10x_rcc.h
+.\objects\sys.o: .\Library\stm32f10x_rtc.h
+.\objects\sys.o: .\Library\stm32f10x_sdio.h
+.\objects\sys.o: .\Library\stm32f10x_spi.h
+.\objects\sys.o: .\Library\stm32f10x_tim.h
+.\objects\sys.o: .\Library\stm32f10x_usart.h
+.\objects\sys.o: .\Library\stm32f10x_wwdg.h
+.\objects\sys.o: .\Library\misc.h
+.\objects\sys.o: .\FreeRTOS\inc\freertos.h
+.\objects\sys.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\sys.o: .\FreeRTOS\FreeRTOSConfig.h
+.\objects\sys.o: .\FreeRTOS\inc\projdefs.h
+.\objects\sys.o: .\FreeRTOS\inc\portable.h
+.\objects\sys.o: .\FreeRTOS\inc\deprecated_definitions.h
+.\objects\sys.o: .\FreeRTOS\port\portmacro.h
+.\objects\sys.o: .\FreeRTOS\inc\mpu_wrappers.h
+.\objects\sys.o: .\FreeRTOS\inc\task.h
+.\objects\sys.o: .\FreeRTOS\inc\list.h
+.\objects\sys.o: .\FreeRTOS\inc\queue.h
+.\objects\sys.o: .\FreeRTOS\inc\semphr.h
+.\objects\sys.o: .\FreeRTOS\inc\event_groups.h
+.\objects\sys.o: .\FreeRTOS\inc\timers.h
+.\objects\sys.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\sys.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\sys.o: .\System\delay\delay.h
+.\objects\sys.o: .\System\sys\sys.h
+.\objects\sys.o: .\Hardware\OLED\OLED.h
+.\objects\sys.o: .\Hardware\MyTask\mytask.h
+.\objects\sys.o: .\Hardware\Servos\servos.h
+.\objects\sys.o: .\Hardware\Pwm\pwm.h
+.\objects\sys.o: .\Hardware\Motor\motor.h
+.\objects\sys.o: .\Hardware\Encoder\encoder.h
+.\objects\sys.o: .\Hardware\Pid\pid.h
+.\objects\sys.o: .\Hardware\MyTimer\mytimer.h
+.\objects\sys.o: .\System\usart\usart.h
+.\objects\sys.o: .\Net\device\esp8266.h
+.\objects\sys.o: D:\A STM32\ARM\ARMCC\Bin\..\include\string.h
+.\objects\sys.o: .\Net\onenet\onenet.h
+.\objects\sys.o: .\Net\cJSON\cJSON.h

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\code\\IDP-Learning-Journey\\\u94FE\u7801\\\u94FE\u7801\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B8F25E2-47C9-45B4-ACD1-B880CC7C05E2}|\u94FE\u7801.vcxproj|E:\\code\\IDP-Learning-Journey\\\u94FE\u7801\\\u94FE\u7801\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B8F25E2-47C9-45B4-ACD1-B880CC7C05E2}|\u94FE\u7801.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 540,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "E:\\code\\IDP-Learning-Journey\\\u94FE\u7801\\\u94FE\u7801\\main.c",
+              "RelativeDocumentMoniker": "main.c",
+              "ToolTip": "E:\\code\\IDP-Learning-Journey\\\u94FE\u7801\\\u94FE\u7801\\main.c",
+              "RelativeToolTip": "main.c",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAMwGgAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-06-04T16:12:31.082Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

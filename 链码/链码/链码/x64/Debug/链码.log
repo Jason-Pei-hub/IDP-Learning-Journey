@@ -1,0 +1,3 @@
+﻿  main.c
+E:\code\IDP-Learning-Journey\链码\链码\main.c(117,21): warning C4047: “=”:“FILE *”与“errno_t”的间接级别不同
+LINK : fatal error LNK1168: 无法打开 E:\code\IDP-Learning-Journey\链码\链码\x64\Debug\链码.exe 进行写入

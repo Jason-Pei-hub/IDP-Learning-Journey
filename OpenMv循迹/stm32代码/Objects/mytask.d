@@ -1,0 +1,63 @@
+.\objects\mytask.o: Hardware\MyTask\mytask.c
+.\objects\mytask.o: Hardware\MyTask\mytask.h
+.\objects\mytask.o: .\Start\stm32f10x.h
+.\objects\mytask.o: .\Start\core_cm3.h
+.\objects\mytask.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\mytask.o: .\Start\system_stm32f10x.h
+.\objects\mytask.o: .\User\stm32f10x_conf.h
+.\objects\mytask.o: .\Library\stm32f10x_adc.h
+.\objects\mytask.o: .\Start\stm32f10x.h
+.\objects\mytask.o: .\Library\stm32f10x_bkp.h
+.\objects\mytask.o: .\Library\stm32f10x_can.h
+.\objects\mytask.o: .\Library\stm32f10x_cec.h
+.\objects\mytask.o: .\Library\stm32f10x_crc.h
+.\objects\mytask.o: .\Library\stm32f10x_dac.h
+.\objects\mytask.o: .\Library\stm32f10x_dbgmcu.h
+.\objects\mytask.o: .\Library\stm32f10x_dma.h
+.\objects\mytask.o: .\Library\stm32f10x_exti.h
+.\objects\mytask.o: .\Library\stm32f10x_flash.h
+.\objects\mytask.o: .\Library\stm32f10x_fsmc.h
+.\objects\mytask.o: .\Library\stm32f10x_gpio.h
+.\objects\mytask.o: .\Library\stm32f10x_i2c.h
+.\objects\mytask.o: .\Library\stm32f10x_iwdg.h
+.\objects\mytask.o: .\Library\stm32f10x_pwr.h
+.\objects\mytask.o: .\Library\stm32f10x_rcc.h
+.\objects\mytask.o: .\Library\stm32f10x_rtc.h
+.\objects\mytask.o: .\Library\stm32f10x_sdio.h
+.\objects\mytask.o: .\Library\stm32f10x_spi.h
+.\objects\mytask.o: .\Library\stm32f10x_tim.h
+.\objects\mytask.o: .\Library\stm32f10x_usart.h
+.\objects\mytask.o: .\Library\stm32f10x_wwdg.h
+.\objects\mytask.o: .\Library\misc.h
+.\objects\mytask.o: .\System\sys\sys.h
+.\objects\mytask.o: .\FreeRTOS\inc\freertos.h
+.\objects\mytask.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\mytask.o: .\FreeRTOS\FreeRTOSConfig.h
+.\objects\mytask.o: .\FreeRTOS\inc\projdefs.h
+.\objects\mytask.o: .\FreeRTOS\inc\portable.h
+.\objects\mytask.o: .\FreeRTOS\inc\deprecated_definitions.h
+.\objects\mytask.o: .\FreeRTOS\port\portmacro.h
+.\objects\mytask.o: .\FreeRTOS\inc\mpu_wrappers.h
+.\objects\mytask.o: .\FreeRTOS\inc\task.h
+.\objects\mytask.o: .\FreeRTOS\inc\list.h
+.\objects\mytask.o: .\FreeRTOS\inc\queue.h
+.\objects\mytask.o: .\FreeRTOS\inc\semphr.h
+.\objects\mytask.o: .\FreeRTOS\inc\event_groups.h
+.\objects\mytask.o: .\FreeRTOS\inc\timers.h
+.\objects\mytask.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\mytask.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\mytask.o: .\System\delay\delay.h
+.\objects\mytask.o: .\System\sys\sys.h
+.\objects\mytask.o: .\Hardware\OLED\OLED.h
+.\objects\mytask.o: .\Hardware\MyTask\mytask.h
+.\objects\mytask.o: .\Hardware\Servos\servos.h
+.\objects\mytask.o: .\Hardware\Pwm\pwm.h
+.\objects\mytask.o: .\Hardware\Motor\motor.h
+.\objects\mytask.o: .\Hardware\Encoder\encoder.h
+.\objects\mytask.o: .\Hardware\Pid\pid.h
+.\objects\mytask.o: .\Hardware\MyTimer\mytimer.h
+.\objects\mytask.o: .\System\usart\usart.h
+.\objects\mytask.o: .\Net\device\esp8266.h
+.\objects\mytask.o: D:\A STM32\ARM\ARMCC\Bin\..\include\string.h
+.\objects\mytask.o: .\Net\onenet\onenet.h
+.\objects\mytask.o: .\Net\cJSON\cJSON.h

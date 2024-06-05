@@ -1,0 +1,66 @@
+.\objects\myusart.o: Hardware\MyUsart\myusart.c
+.\objects\myusart.o: Hardware\MyUsart\myusart.h
+.\objects\myusart.o: .\Start\stm32f10x.h
+.\objects\myusart.o: .\Start\core_cm3.h
+.\objects\myusart.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\myusart.o: .\Start\system_stm32f10x.h
+.\objects\myusart.o: .\User\stm32f10x_conf.h
+.\objects\myusart.o: .\Library\stm32f10x_adc.h
+.\objects\myusart.o: .\Start\stm32f10x.h
+.\objects\myusart.o: .\Library\stm32f10x_bkp.h
+.\objects\myusart.o: .\Library\stm32f10x_can.h
+.\objects\myusart.o: .\Library\stm32f10x_cec.h
+.\objects\myusart.o: .\Library\stm32f10x_crc.h
+.\objects\myusart.o: .\Library\stm32f10x_dac.h
+.\objects\myusart.o: .\Library\stm32f10x_dbgmcu.h
+.\objects\myusart.o: .\Library\stm32f10x_dma.h
+.\objects\myusart.o: .\Library\stm32f10x_exti.h
+.\objects\myusart.o: .\Library\stm32f10x_flash.h
+.\objects\myusart.o: .\Library\stm32f10x_fsmc.h
+.\objects\myusart.o: .\Library\stm32f10x_gpio.h
+.\objects\myusart.o: .\Library\stm32f10x_i2c.h
+.\objects\myusart.o: .\Library\stm32f10x_iwdg.h
+.\objects\myusart.o: .\Library\stm32f10x_pwr.h
+.\objects\myusart.o: .\Library\stm32f10x_rcc.h
+.\objects\myusart.o: .\Library\stm32f10x_rtc.h
+.\objects\myusart.o: .\Library\stm32f10x_sdio.h
+.\objects\myusart.o: .\Library\stm32f10x_spi.h
+.\objects\myusart.o: .\Library\stm32f10x_tim.h
+.\objects\myusart.o: .\Library\stm32f10x_usart.h
+.\objects\myusart.o: .\Library\stm32f10x_wwdg.h
+.\objects\myusart.o: .\Library\misc.h
+.\objects\myusart.o: .\System\sys\sys.h
+.\objects\myusart.o: .\FreeRTOS\inc\freertos.h
+.\objects\myusart.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\myusart.o: .\FreeRTOS\FreeRTOSConfig.h
+.\objects\myusart.o: .\FreeRTOS\inc\projdefs.h
+.\objects\myusart.o: .\FreeRTOS\inc\portable.h
+.\objects\myusart.o: .\FreeRTOS\inc\deprecated_definitions.h
+.\objects\myusart.o: .\FreeRTOS\port\portmacro.h
+.\objects\myusart.o: .\FreeRTOS\inc\mpu_wrappers.h
+.\objects\myusart.o: .\FreeRTOS\inc\task.h
+.\objects\myusart.o: .\FreeRTOS\inc\list.h
+.\objects\myusart.o: .\FreeRTOS\inc\queue.h
+.\objects\myusart.o: .\FreeRTOS\inc\semphr.h
+.\objects\myusart.o: .\FreeRTOS\inc\event_groups.h
+.\objects\myusart.o: .\FreeRTOS\inc\timers.h
+.\objects\myusart.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\myusart.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\myusart.o: .\System\delay\delay.h
+.\objects\myusart.o: .\System\sys\sys.h
+.\objects\myusart.o: .\Hardware\OLED\OLED.h
+.\objects\myusart.o: .\Hardware\MyTask\mytask.h
+.\objects\myusart.o: .\Hardware\Servos\servos.h
+.\objects\myusart.o: .\Hardware\Led\led.h
+.\objects\myusart.o: .\Hardware\Vbatt\vbatt.h
+.\objects\myusart.o: .\Hardware\Pwm\pwm.h
+.\objects\myusart.o: .\Hardware\Motor\motor.h
+.\objects\myusart.o: .\Hardware\Encoder\encoder.h
+.\objects\myusart.o: .\Hardware\Pid\pid.h
+.\objects\myusart.o: .\Hardware\MyTimer\mytimer.h
+.\objects\myusart.o: .\System\usart\usart.h
+.\objects\myusart.o: .\Hardware\Voice\voice.h
+.\objects\myusart.o: .\Net\device\esp8266.h
+.\objects\myusart.o: D:\A STM32\ARM\ARMCC\Bin\..\include\string.h
+.\objects\myusart.o: .\Net\onenet\onenet.h
+.\objects\myusart.o: .\Net\cJSON\cJSON.h

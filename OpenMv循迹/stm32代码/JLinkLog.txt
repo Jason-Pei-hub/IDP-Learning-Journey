@@ -1,0 +1,59 @@
+T012C 000:276.088   SEGGER J-Link V7.22b Log File
+T012C 000:277.253   DLL Compiled: Jun 17 2021 17:22:49
+T012C 000:277.297   Logging started @ 2023-07-11 11:51
+T012C 000:277.339 - 277.357ms
+T012C 000:277.663 JLINK_SetWarnOutHandler(...)
+T012C 000:277.904 - 0.258ms
+T012C 000:277.947 JLINK_OpenEx(...)
+T012C 000:296.798   Looking for J-Link GUI Server exe at: D:\A STM32\ARM\Segger\JLinkGUIServer.exe
+T012C 000:297.364   Looking for J-Link GUI Server exe at: \JLinkGUIServer.exe
+T012C 000:598.021   Failed to connect to J-Link GUI Server.
+T012C 002:677.913   TELNET listener socket opened on port 19021
+T012C 002:678.545   WEBSRV Starting webserver
+T012C 002:679.400   WEBSRV Webserver running on local port 19080
+T012C 002:679.529 - 2401.861ms returns "O.K."
+T012C 002:679.851 JLINK_GetEmuCaps()
+T012C 002:679.880 - 0.038ms returns 0x98E61B83
+T012C 002:679.908 JLINK_TIF_GetAvailable(...)
+T012C 002:679.927 - 0.026ms
+T012C 002:679.945 JLINK_SetErrorOutHandler(...)
+T012C 002:679.963 - 0.025ms
+T012C 002:680.261 JLINK_ExecCommand("ProjectFile = "D:\Users\月初\Desktop\syxc\转向环\JLinkSettings.ini"", ...). 
+T012C 002:731.254 - 51.023ms returns 0x00
+T012C 002:734.693 JLINK_ExecCommand("Device = STM32F103VE", ...). 
+T012C 002:735.720   Device "STM32F103VE" selected.
+T012C 002:736.312 - 1.583ms returns 0x00
+T012C 002:736.347 JLINK_GetHardwareVersion()
+T012C 002:740.636 - 4.333ms returns 10000
+T012C 002:740.703 JLINK_GetDLLVersion()
+T012C 002:740.728 - 0.036ms returns 72202
+T012C 002:740.756 JLINK_GetOEMString(...)
+T012C 002:740.783 JLINK_GetFirmwareString(...)
+T012C 002:740.811 - 0.039ms
+T012C 002:740.846 JLINK_GetDLLVersion()
+T012C 002:740.870 - 0.035ms returns 72202
+T012C 002:740.897 JLINK_GetCompileDateTime()
+T012C 002:740.920 - 0.034ms
+T012C 002:740.951 JLINK_GetFirmwareString(...)
+T012C 002:740.974 - 0.035ms
+T012C 002:741.002 JLINK_GetHardwareVersion()
+T012C 002:741.028 - 0.037ms returns 10000
+T012C 002:741.057 JLINK_GetSN()
+T012C 002:741.080 - 0.035ms returns 1049792961
+T012C 002:741.108 JLINK_GetOEMString(...)
+T012C 004:062.653 JLINK_TIF_Select(JLINKARM_TIF_JTAG)
+T012C 004:062.881   
+  ***** Error: 
+T012C 004:062.908   Debugger tries to select target interface JTAG.
+This interface is not supported by the connected emulator.
+Selection will be ignored by the DLL.
+T012C 004:062.933 - 0.288ms returns 0x01
+T012C 004:062.982 JLINK_HasError()
+T012C 004:063.061 JLINK_SetSpeed(5000)
+T012C 004:063.080 - 0.025ms
+T012C 004:063.954 JLINK_HasError()
+T012C 004:063.993 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T012C 004:064.009 - 0.022ms returns JLINKARM_RESET_TYPE_NORMAL
+T012C 004:064.024 JLINK_Reset()
+T012C 004:111.666   InitTarget() start
+T012C 004:111.719    J-Link Script File: Executing InitTarget()

@@ -1,0 +1,63 @@
+.\objects\servos.o: Hardware\Servos\servos.c
+.\objects\servos.o: Hardware\Servos\servos.h
+.\objects\servos.o: .\Start\stm32f10x.h
+.\objects\servos.o: .\Start\core_cm3.h
+.\objects\servos.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\servos.o: .\Start\system_stm32f10x.h
+.\objects\servos.o: .\User\stm32f10x_conf.h
+.\objects\servos.o: .\Library\stm32f10x_adc.h
+.\objects\servos.o: .\Start\stm32f10x.h
+.\objects\servos.o: .\Library\stm32f10x_bkp.h
+.\objects\servos.o: .\Library\stm32f10x_can.h
+.\objects\servos.o: .\Library\stm32f10x_cec.h
+.\objects\servos.o: .\Library\stm32f10x_crc.h
+.\objects\servos.o: .\Library\stm32f10x_dac.h
+.\objects\servos.o: .\Library\stm32f10x_dbgmcu.h
+.\objects\servos.o: .\Library\stm32f10x_dma.h
+.\objects\servos.o: .\Library\stm32f10x_exti.h
+.\objects\servos.o: .\Library\stm32f10x_flash.h
+.\objects\servos.o: .\Library\stm32f10x_fsmc.h
+.\objects\servos.o: .\Library\stm32f10x_gpio.h
+.\objects\servos.o: .\Library\stm32f10x_i2c.h
+.\objects\servos.o: .\Library\stm32f10x_iwdg.h
+.\objects\servos.o: .\Library\stm32f10x_pwr.h
+.\objects\servos.o: .\Library\stm32f10x_rcc.h
+.\objects\servos.o: .\Library\stm32f10x_rtc.h
+.\objects\servos.o: .\Library\stm32f10x_sdio.h
+.\objects\servos.o: .\Library\stm32f10x_spi.h
+.\objects\servos.o: .\Library\stm32f10x_tim.h
+.\objects\servos.o: .\Library\stm32f10x_usart.h
+.\objects\servos.o: .\Library\stm32f10x_wwdg.h
+.\objects\servos.o: .\Library\misc.h
+.\objects\servos.o: .\System\sys\sys.h
+.\objects\servos.o: .\FreeRTOS\inc\freertos.h
+.\objects\servos.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\servos.o: .\FreeRTOS\FreeRTOSConfig.h
+.\objects\servos.o: .\FreeRTOS\inc\projdefs.h
+.\objects\servos.o: .\FreeRTOS\inc\portable.h
+.\objects\servos.o: .\FreeRTOS\inc\deprecated_definitions.h
+.\objects\servos.o: .\FreeRTOS\port\portmacro.h
+.\objects\servos.o: .\FreeRTOS\inc\mpu_wrappers.h
+.\objects\servos.o: .\FreeRTOS\inc\task.h
+.\objects\servos.o: .\FreeRTOS\inc\list.h
+.\objects\servos.o: .\FreeRTOS\inc\queue.h
+.\objects\servos.o: .\FreeRTOS\inc\semphr.h
+.\objects\servos.o: .\FreeRTOS\inc\event_groups.h
+.\objects\servos.o: .\FreeRTOS\inc\timers.h
+.\objects\servos.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\servos.o: D:\A STM32\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\servos.o: .\System\delay\delay.h
+.\objects\servos.o: .\System\sys\sys.h
+.\objects\servos.o: .\Hardware\OLED\OLED.h
+.\objects\servos.o: .\Hardware\MyTask\mytask.h
+.\objects\servos.o: .\Hardware\Servos\servos.h
+.\objects\servos.o: .\Hardware\Pwm\pwm.h
+.\objects\servos.o: .\Hardware\Motor\motor.h
+.\objects\servos.o: .\Hardware\Encoder\encoder.h
+.\objects\servos.o: .\Hardware\Pid\pid.h
+.\objects\servos.o: .\Hardware\MyTimer\mytimer.h
+.\objects\servos.o: .\System\usart\usart.h
+.\objects\servos.o: .\Net\device\esp8266.h
+.\objects\servos.o: D:\A STM32\ARM\ARMCC\Bin\..\include\string.h
+.\objects\servos.o: .\Net\onenet\onenet.h
+.\objects\servos.o: .\Net\cJSON\cJSON.h

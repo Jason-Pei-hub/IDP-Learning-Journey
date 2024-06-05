@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26A36C2B-52DB-417D-B506-C985461CE1EB}|code\\code.vcxproj|E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\ChainCode.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{26A36C2B-52DB-417D-B506-C985461CE1EB}|code\\code.vcxproj|solutionrelative:code\\ChainCode.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A36C2B-52DB-417D-B506-C985461CE1EB}|code\\code.vcxproj|E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\IDP.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{26A36C2B-52DB-417D-B506-C985461CE1EB}|code\\code.vcxproj|solutionrelative:code\\IDP.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A36C2B-52DB-417D-B506-C985461CE1EB}|code\\code.vcxproj|E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{26A36C2B-52DB-417D-B506-C985461CE1EB}|code\\code.vcxproj|solutionrelative:code\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A36C2B-52DB-417D-B506-C985461CE1EB}|code\\code.vcxproj|E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\Chain.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{26A36C2B-52DB-417D-B506-C985461CE1EB}|code\\code.vcxproj|solutionrelative:code\\Chain.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A36C2B-52DB-417D-B506-C985461CE1EB}|code\\code.vcxproj|E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\IDP.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{26A36C2B-52DB-417D-B506-C985461CE1EB}|code\\code.vcxproj|solutionrelative:code\\IDP.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 540,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.c",
+              "DocumentMoniker": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\main.c",
+              "RelativeDocumentMoniker": "code\\main.c",
+              "ToolTip": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\main.c",
+              "RelativeToolTip": "code\\main.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-03-09T14:37:15.677Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChainCode.c",
+              "DocumentMoniker": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\ChainCode.c",
+              "RelativeDocumentMoniker": "code\\ChainCode.c",
+              "ToolTip": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\ChainCode.c",
+              "RelativeToolTip": "code\\ChainCode.c",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAAAGIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-06-04T16:03:59.408Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Chain.c",
+              "DocumentMoniker": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\Chain.c",
+              "RelativeDocumentMoniker": "code\\Chain.c",
+              "ToolTip": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\Chain.c",
+              "RelativeToolTip": "code\\Chain.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-06-04T13:29:44.341Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 366,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IDP.h",
+              "DocumentMoniker": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\IDP.h",
+              "RelativeDocumentMoniker": "code\\IDP.h",
+              "ToolTip": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\IDP.h",
+              "RelativeToolTip": "code\\IDP.h",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-25T00:50:31.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IDP.c",
+              "DocumentMoniker": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\IDP.c",
+              "RelativeDocumentMoniker": "code\\IDP.c",
+              "ToolTip": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\\u56FE\u50CF\u7279\u6027\u7684\u8BA1\u7B97_code\\code\\code\\IDP.c",
+              "RelativeToolTip": "code\\IDP.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQFAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-05-25T00:50:46.813Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

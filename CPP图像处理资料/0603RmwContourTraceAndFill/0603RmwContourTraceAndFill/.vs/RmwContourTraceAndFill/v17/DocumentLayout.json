@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E11DB969-2BEA-49F9-B5F7-74C2D1D2AC78}|RmwContourTraceAndFill\\RmwContourTraceAndFill.vcxproj|E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\RmwCPP0603\\main0603.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E11DB969-2BEA-49F9-B5F7-74C2D1D2AC78}|RmwContourTraceAndFill\\RmwContourTraceAndFill.vcxproj|solutionrelative:RmwCPP0603\\main0603.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E11DB969-2BEA-49F9-B5F7-74C2D1D2AC78}|RmwContourTraceAndFill\\RmwContourTraceAndFill.vcxproj|E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\RmwCPP0603\\RmwALG_ContourTrace.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E11DB969-2BEA-49F9-B5F7-74C2D1D2AC78}|RmwContourTraceAndFill\\RmwContourTraceAndFill.vcxproj|solutionrelative:RmwCPP0603\\RmwALG_ContourTrace.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E11DB969-2BEA-49F9-B5F7-74C2D1D2AC78}|RmwContourTraceAndFill\\RmwContourTraceAndFill.vcxproj|E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\RmwCPP0603\\RmwALG_ContourFill.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E11DB969-2BEA-49F9-B5F7-74C2D1D2AC78}|RmwContourTraceAndFill\\RmwContourTraceAndFill.vcxproj|solutionrelative:RmwCPP0603\\RmwALG_ContourFill.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E11DB969-2BEA-49F9-B5F7-74C2D1D2AC78}|RmwContourTraceAndFill\\RmwContourTraceAndFill.vcxproj|E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\RmwCPP0603\\bmpFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E11DB969-2BEA-49F9-B5F7-74C2D1D2AC78}|RmwContourTraceAndFill\\RmwContourTraceAndFill.vcxproj|solutionrelative:RmwCPP0603\\bmpFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RmwALG_ContourTrace.cpp",
+              "DocumentMoniker": "E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\RmwCPP0603\\RmwALG_ContourTrace.cpp",
+              "RelativeDocumentMoniker": "RmwCPP0603\\RmwALG_ContourTrace.cpp",
+              "ToolTip": "E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\RmwCPP0603\\RmwALG_ContourTrace.cpp",
+              "RelativeToolTip": "RmwCPP0603\\RmwALG_ContourTrace.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T15:35:07.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RmwALG_ContourFill.cpp",
+              "DocumentMoniker": "E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\RmwCPP0603\\RmwALG_ContourFill.cpp",
+              "RelativeDocumentMoniker": "RmwCPP0603\\RmwALG_ContourFill.cpp",
+              "ToolTip": "E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\RmwCPP0603\\RmwALG_ContourFill.cpp",
+              "RelativeToolTip": "RmwCPP0603\\RmwALG_ContourFill.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T15:35:04.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main0603.cpp",
+              "DocumentMoniker": "E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\RmwCPP0603\\main0603.cpp",
+              "RelativeDocumentMoniker": "RmwCPP0603\\main0603.cpp",
+              "ToolTip": "E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\RmwCPP0603\\main0603.cpp",
+              "RelativeToolTip": "RmwCPP0603\\main0603.cpp",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAFsAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T15:34:21.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "bmpFile.cpp",
+              "DocumentMoniker": "E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\RmwCPP0603\\bmpFile.cpp",
+              "RelativeDocumentMoniker": "RmwCPP0603\\bmpFile.cpp",
+              "ToolTip": "E:\\code\\IDP-Learning-Journey\\CPP\u56FE\u50CF\u5904\u7406\u8D44\u6599\\0603RmwContourTraceAndFill\\0603RmwContourTraceAndFill\\RmwCPP0603\\bmpFile.cpp",
+              "RelativeToolTip": "RmwCPP0603\\bmpFile.cpp",
+              "ViewState": "AQIAAD4BAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T15:33:58.103Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

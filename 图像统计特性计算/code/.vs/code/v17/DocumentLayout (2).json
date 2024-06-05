@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\code\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26A36C2B-52DB-417D-B506-C985461CE1EB}|code\\code.vcxproj|E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\code\\code\\test_histogram.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{26A36C2B-52DB-417D-B506-C985461CE1EB}|code\\code.vcxproj|solutionrelative:code\\test_histogram.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test_histogram.c",
+              "DocumentMoniker": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\code\\code\\test_histogram.c",
+              "RelativeDocumentMoniker": "code\\test_histogram.c",
+              "ToolTip": "E:\\code\\IDP-Learning-Journey\\\u56FE\u50CF\u7EDF\u8BA1\u7279\u6027\u8BA1\u7B97\\code\\code\\test_histogram.c",
+              "RelativeToolTip": "code\\test_histogram.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-03-09T14:37:15.677Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
