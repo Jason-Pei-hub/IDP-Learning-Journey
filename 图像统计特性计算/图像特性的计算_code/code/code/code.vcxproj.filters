@@ -24,9 +24,6 @@
     <ClCompile Include="Chain.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ChainCode.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IDP.h">

@@ -133,7 +133,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Chain.c" />
-    <ClCompile Include="ChainCode.c" />
     <ClCompile Include="IDP.c" />
     <ClCompile Include="main.c">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\include</AdditionalIncludeDirectories>

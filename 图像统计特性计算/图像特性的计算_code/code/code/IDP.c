@@ -1072,98 +1072,482 @@ void printList(struct Node* head) {
     printf("\n");
 }
 
-// 在链表尾部插入一个节点
-struct Node* insertAtEnd(struct Node* head, int value) {
+void insertAtEnd(struct Node** head, int value) 
+{
     // 创建一个新节点
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = value;  // 设置新节点的数据
     newNode->next = NULL;   // 将新节点的next指针置为NULL
 
     // 如果链表为空，则新节点即为头节点
-    if (head == NULL) {
-        head = newNode;
+    if (*head == NULL) {
+        *head = newNode;
     }
     else {
         // 找到链表尾部节点
-        struct Node* temp = head;
+        struct Node* temp = *head;
         while (temp->next != NULL) {
             temp = temp->next;
         }
         // 将新节点链接到尾部节点后面
         temp->next = newNode;
     }
-    return head;
 }
 
-//递归生成链码
-//image：图像数据指针
-//width、height：图像的宽度和高度
-//x、y：当前坐标
-//flag：当前方向
-//head：链表头指针
-//tail：链表尾指针
-void generateChainCode(uint8_t* image, int width, int height, int x, int y, int flag, struct Node** head, struct Node** tail)
+int generateChainCode(uint8_t* image, int width, int height, int x, int y, int flag, struct Node** head, struct Node** tail) 
 {
-    // 写出八个方向的值的表示
-    int right = image[(y * width + x) + 1];
-    int righttop = image[((y - 1) * width + x) + 1];
-    int top = image[((y - 1) * width + x)];
-    int lefttop = image[((y - 1) * width + x - 1)];
-    int left = image[(y * width + x - 1)];
-    int leftbottom = image[((y + 1) * width + x - 1)];
-    int bottom = image[((y + 1) * width + x)];
-    int rightbottom = image[((y + 1) * width + x + 1)];
+    printf("%d ", flag);
+    int flag1 = 0;
+    int x1 = x;
+    int y1 = y;
+    if (flag == 0)
+    {
+        if (flag1 == 1 && x == x1 && y == y1)
+            return head;
 
-    // 插入节点到链表尾部
-    *tail = insertAtEnd(*tail, flag);
-   
+        if ((image[y  * width / 8 + (x+1) / 8] >> (7 - ((x+1) % 8)) & 1 ) == 0)
+        {
+            flag = 0;
+            insertAtEnd(head, 0);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y, flag, head, tail);
+        }
+        else if((image[(y + 1) * width / 8 + (x+1) / 8] >> (7 - ((x+1) % 8)) & 1) == 0)
+        {
+            flag = 1;
+            insertAtEnd(head, 1);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 2;
+            insertAtEnd(head, 2);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + (x-1) / 8] >> (7 - ((x-1) % 8)) & 1) == 0)
+        {
+            flag = 3;
+            insertAtEnd(head, 3);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y + 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 5;
+            insertAtEnd(head, 5);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 6;
+            insertAtEnd(head, 6);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 7;
+            insertAtEnd(head, 7);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y - 1, flag, head, tail);
+        } 
+        else
+            return 0;
+    }
+    if (flag == 2)
+    {
+        if (flag1 == 1 && x == x1 && y == y1)
+            return head;
 
-    // 递归生成链码
-    if (right == 0 && flag != 0)
-    {
-        image[(y * width + x) + 1] = 1;
-        generateChainCode(image, width, height, x + 1, y, 0, head, tail);
+        if ((image[y * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 0;
+            insertAtEnd(head, 0);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 1;
+            insertAtEnd(head, 1);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 2;
+            insertAtEnd(head, 2);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 3;
+            insertAtEnd(head, 3);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y + 1, flag, head, tail);
+        }
+        else if ((image[y * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 4;
+            insertAtEnd(head, 4);
+            generateChainCode(image, width, height, x - 1, y, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 5;
+            insertAtEnd(head, 5);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 7;
+            insertAtEnd(head, 7);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y - 1, flag, head, tail);
+        }
+        else
+            return 0;
     }
-    else if (righttop == 0 && flag != 1)
+    if (flag == 4)
     {
-        image[((y - 1) * width + x) + 1] = 1;
-        generateChainCode(image, width, height, x + 1, y - 1, 1, head, tail);
-    }
-    else if (top == 0 && flag != 2)
-    {
-        image[((y - 1) * width + x)] = 1;
-        generateChainCode(image, width, height, x, y - 1, 2, head, tail);
-    }
-    else if (lefttop == 0 && flag != 3)
-    {
-        image[((y - 1) * width + x - 1)] = 1;
-        generateChainCode(image, width, height, x - 1, y - 1, 3, head, tail);
-    }
-    else if (left == 0 && flag != 4)
-    {
-        image[(y * width + x - 1)] = 1;
-        generateChainCode(image, width, height, x - 1, y, 4, head, tail);
-    }
-    else if (leftbottom == 0 && flag != 5)
-    {
-        image[((y + 1) * width + x - 1)] = 1;
-        generateChainCode(image, width, height, x - 1, y + 1, 5, head, tail);
-    }
-    else if (bottom == 0 && flag != 6)
-    {
-        image[((y + 1) * width + x)] = 1;
-        generateChainCode(image, width, height, x, y + 1, 6, head, tail);
-    }
-    else if (rightbottom == 0 && flag != 7)
-    {
-        image[((y + 1) * width + x + 1)] = 1;
-        generateChainCode(image, width, height, x + 1, y + 1, 7, head, tail);
-    }
-    else
-    {
+        if (flag1 == 1 && x == x1 && y == y1)
+            return head;
 
-        // 回到原点，结束递归
-        return;
+        if ((image[(y + 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 1;
+            insertAtEnd(head, 1);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 2;
+            insertAtEnd(head, 2);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 3;
+            insertAtEnd(head, 3);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y + 1, flag, head, tail);
+        }
+        else if ((image[y * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 4;
+            insertAtEnd(head, 4);
+            generateChainCode(image, width, height, x - 1, y, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 5;
+            insertAtEnd(head, 5);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 6;
+            insertAtEnd(head, 6);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 7;
+            insertAtEnd(head, 7);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y - 1, flag, head, tail);
+        }
+        else
+            return 0;
+    }
+    if (flag == 6)
+    {
+        if (flag1 == 1 && x == x1 && y == y1)
+            return head;
+
+        if ((image[y * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 0;
+            insertAtEnd(head, 0);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 1;
+            insertAtEnd(head, 1);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 3;
+            insertAtEnd(head, 3);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y + 1, flag, head, tail);
+        }
+        else if ((image[y * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 4;
+            insertAtEnd(head, 4);
+            generateChainCode(image, width, height, x - 1, y, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 5;
+            insertAtEnd(head, 5);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 6;
+            insertAtEnd(head, 6);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 7;
+            insertAtEnd(head, 7);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y - 1, flag, head, tail);
+        }
+        else
+            return 0;
+    }
+    if (flag == 1)
+    {
+        if (flag1 == 1 && x == x1 && y == y1)
+            return head;
+
+        if ((image[y * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 0;
+            insertAtEnd(head, 0);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 1;
+            insertAtEnd(head, 1);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 2;
+            insertAtEnd(head, 2);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 3;
+            insertAtEnd(head, 3);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y + 1, flag, head, tail);
+        }
+        else if ((image[y * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 4;
+            insertAtEnd(head, 4);
+            generateChainCode(image, width, height, x - 1, y, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 6;
+            insertAtEnd(head, 6);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 7;
+            insertAtEnd(head, 7);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y - 1, flag, head, tail);
+        }
+        else
+            return 0;
+    }
+    if (flag == 3)
+    {
+        if (flag1 == 1 && x == x1 && y == y1)
+            return head;
+
+        if ((image[y * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 0;
+            insertAtEnd(head, 0);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 1;
+            insertAtEnd(head, 1);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 2;
+            insertAtEnd(head, 2);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 3;
+            insertAtEnd(head, 3);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y + 1, flag, head, tail);
+        }
+        else if ((image[y * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 4;
+            insertAtEnd(head, 4);
+            generateChainCode(image, width, height, x - 1, y, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 5;
+            insertAtEnd(head, 5);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 6;
+            insertAtEnd(head, 6);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y - 1, flag, head, tail);
+        }
+        else
+            return 0;
+    }
+    if (flag == 5)
+    {
+        if (flag1 == 1 && x == x1 && y == y1)
+            return head;
+
+        if ((image[y * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 0;
+            insertAtEnd(head, 0);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 2;
+            insertAtEnd(head, 2);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 3;
+            insertAtEnd(head, 3);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y + 1, flag, head, tail);
+        }
+        else if ((image[y * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 4;
+            insertAtEnd(head, 4);
+            generateChainCode(image, width, height, x - 1, y, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 5;
+            insertAtEnd(head, 5);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 6;
+            insertAtEnd(head, 6);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 7;
+            insertAtEnd(head, 7);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y - 1, flag, head, tail);
+        }
+        else
+            return 0;
+    }
+    if (flag == 7)
+    {
+        if (flag1 == 1 && x == x1 && y == y1)
+            return head;
+
+        if ((image[y * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 0;
+            insertAtEnd(head, 0);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 1;
+            insertAtEnd(head, 1);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y + 1, flag, head, tail);
+        }
+        else if ((image[(y + 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 2;
+            insertAtEnd(head, 2);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y + 1, flag, head, tail);
+        }
+        else if ((image[y * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 4;
+            insertAtEnd(head, 4);
+            generateChainCode(image, width, height, x - 1, y, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x - 1) / 8] >> (7 - ((x - 1) % 8)) & 1) == 0)
+        {
+            flag = 5;
+            insertAtEnd(head, 5);
+            flag1 = 1;
+            generateChainCode(image, width, height, x - 1, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + x / 8] >> (7 - (x % 8)) & 1) == 0)
+        {
+            flag = 6;
+            insertAtEnd(head, 6);
+            flag1 = 1;
+            generateChainCode(image, width, height, x, y - 1, flag, head, tail);
+        }
+        else if ((image[(y - 1) * width / 8 + (x + 1) / 8] >> (7 - ((x + 1) % 8)) & 1) == 0)
+        {
+            flag = 7;
+            insertAtEnd(head, 7);
+            flag1 = 1;
+            generateChainCode(image, width, height, x + 1, y - 1, flag, head, tail);
+        }
+        else
+            return 0;
     }
 }
 
@@ -1173,7 +1557,6 @@ void generateChainCode(uint8_t* image, int width, int height, int x, int y, int 
 // 修改后的链码生成函数
 struct Node* ChainCode(uint8_t* image, int width, int height)
 {
-    unsigned char* imageCopy = (unsigned char*)malloc(width * height);
     int size = width * height;
     int index = 0;
     int flag = -1;
@@ -1183,57 +1566,49 @@ struct Node* ChainCode(uint8_t* image, int width, int height)
 
     printf("图像大小: %d x %d\n", width, height);
 
-    // 声明链表头并初始化为空
     struct Node* head = NULL;
-
-    //for (int y = 1; y <= height; y++)
-    //{
-    //    for (int x = 1; x <= width; x++)
-    //    {
-    //        printf("%d %d :",y,x);
-    //        printf("%d ", image[y * width + x]);
-    //        }
-    //}
     printf("\n");
-    //寻找第一个边缘点
-    for (int y = 1; y <= height; y++)
-    {
-        for (int x = 1; x <= width; x++)
-        {
-            
-            printf("%d ", image[y * width + x]);
-            if (image[y * width + x] == 0)
-            {
-                firstx = x;
-                firsty = y;
-                break;
+
+    int found = 0; // 标志变量，用于控制外层循环
+
+    for (int i = 0; i < height && !found; ++i) {
+        for (int j = 0; j < width; ++j) {
+            // 获取每个像素的值
+            uint8_t pixel = (image[i * width / 8 + j / 8] >> (7 - (j % 8))) & 1;
+            //[i * width / 8 + j / 8]找到对应的字节
+           // >> (7 - (j % 8)) 找到bit在字节中的位置
+           // & 1 其他位都附0，保留当前值
+           // printf("%d ", pixel);
+            if (pixel == 0) {
+                if (flag == -1) {
+                    flag = 0;
+                    firstx = j;
+                    firsty = i;
+                    // 生成链码
+                    uint32_t img = (width * height + 7) / 8;  // 计算图像数据所需的字节数
+                    uint8_t* imgcopy = (uint8_t*)malloc(img);
+                    memcpy(imgcopy, image, img);
+                    generateChainCode(imgcopy, width, height, j, i,0, &head, &head);
+                    printf("第一个目标像素点为：(%d, %d)", firstx, firsty);
+                    printList(head);
+                    found = 1; // 设置标志变量，用于终止外层循环
+                }
+                break; // 跳出内层循环
             }
         }
-        if (firstx != -1 && firsty != -1) {
-            break;
-        }
+        //printf("\n");
     }
 
-    if (firstx == -1 || firsty == -1)
-    {
-        printf("没有找到起始边缘点\n");
-        return NULL;
-    }
-    printf("起始边缘点坐标: (%d, %d)\n", firstx, firsty);
-    //递归生成链码
-    generateChainCode(imageCopy, width, height, firstx, firsty, -1, &head, &head);
-
-    // 打印链表
-    printf("链码:\n");
-    printList(head);
-
-    free(imageCopy);
     return head;
 }
 
 
-// 读取2值图像
-uint8_t* readBinaryBMP(const char* filename, int* width, int* height)
+//读取1位灰度图片
+//filename：字符数组的指针，用于指定要保存的图像文件的名称或路径。
+//imageData：无符号 8 位整型数据的指针，代表要保存的图像数据。
+//width：图像的宽度。
+//height：图像的高度。
+uint8_t* read1BitBMP(const char* filename, int* width, int* height)
 {
     FILE* file = fopen(filename, "rb");
     if (!file) {
@@ -1250,122 +1625,28 @@ uint8_t* readBinaryBMP(const char* filename, int* width, int* height)
     *height = *(int*)&bmpHeader[22];
 
     // 分配存储图像数据的内存
-    uint8_t* imageData = (uint8_t*)malloc(*width * *height);
+    uint32_t imageDataSize = (*width * *height + 7) / 8;  // 计算图像数据所需的字节数
+    uint8_t* imageData = (uint8_t*)malloc(imageDataSize);
     if (!imageData) {
         fprintf(stderr, "内存分配失败\n");
         fclose(file);
         return NULL;
     }
 
+    // 计算调色板的大小
+    int paletteSize = *(int*)&bmpHeader[46];
+    if (paletteSize == 0)
+        paletteSize = 256;
+
+    // 读取调色板数据
+    uint8_t palette[1024];
+    fread(palette, 1, paletteSize * 4, file);
+
     // 读取图像数据
-    fseek(file, *(int*)&bmpHeader[10], SEEK_SET);
-    fread(imageData, 1, *width * *height, file);
+    fseek(file, *(int*)&bmpHeader[10], SEEK_SET);  // 使用正确的偏移量
+    fread(imageData, 1, imageDataSize, file);  // 读取正确大小的图像数据
 
     fclose(file);
 
     return imageData;
-}
-
-uint8_t* read1BitBMP(const char* filename, int* width, int* height) {
-    FILE* file = fopen(filename, "rb");
-    if (!file) {
-        fprintf(stderr, "打开文件失败：%s\n", filename);
-        return NULL;
-    }
-
-    // 读取BMP文件头部信息
-    uint8_t bmpHeader[54];
-    fread(bmpHeader, 1, 54, file);
-
-    // 检查文件是否为1位BMP文件
-    if (*(uint16_t*)&bmpHeader[28] != 1) {
-        fprintf(stderr, "不是1位BMP文件：%s\n", filename);
-        fclose(file);
-        return NULL;
-    }
-
-    // 从文件头部提取图像宽度和高度信息
-    *width = *(int*)&bmpHeader[18];
-    *height = *(int*)&bmpHeader[22];
-
-    // 分配存储图像数据的内存
-    uint8_t* rawData = (uint8_t*)malloc((*width + 7) / 8 * *height);
-    if (!rawData) {
-        fprintf(stderr, "内存分配失败\n");
-        fclose(file);
-        return NULL;
-    }
-
-    // 读取原始像素数据
-    fseek(file, *(int*)&bmpHeader[10], SEEK_SET);
-    fread(rawData, 1, (*width + 7) / 8 * *height, file);
-
-    fclose(file);
-
-    return rawData;
-}
-
-
-// BMP文件头结构体
-typedef struct {
-    uint16_t signature;       // 文件类型标识 "BM" (0x4D42)
-    uint32_t fileSize;        // 文件大小
-    uint32_t reserved;        // 保留字，必须设置为0
-    uint32_t dataOffset;      // 数据偏移
-    uint32_t headerSize;      // 信息头大小
-    uint32_t width;           // 图像宽度
-    uint32_t height;          // 图像高度
-    uint16_t planes;          // 图像平面数，必须设置为1
-    uint16_t bitDepth;        // 每个像素的位数
-    uint32_t compression;     // 压缩类型
-    uint32_t imageSize;       // 图像数据大小
-    uint32_t xResolution;     // 水平分辨率
-    uint32_t yResolution;     // 垂直分辨率
-    uint32_t colorsUsed;      // 使用的颜色数
-    uint32_t colorsImportant; // 重要的颜色数
-} BMPHeader;
-
-// 保存1位BMP图像
-// filename: 要保存的文件名
-// image: 图像数据指针，每个像素用一个字节表示（0表示黑色，1表示白色）
-// width: 图像宽度
-// height: 图像高度
-int save1BitBMP(const char* filename, uint8_t* image, int width, int height) {
-    FILE* file = fopen(filename, "wb");
-    if (file == NULL) {
-        printf("无法打开文件 %s\n", filename);
-        return -1;
-    }
-
-    // 计算图像数据大小和文件大小
-    int dataSize = (width + 7) / 8 * height; // 每行字节数需要向上取整
-    int fileSize = sizeof(BMPHeader) + dataSize;
-
-    // 填充BMP文件头
-    BMPHeader header;
-    header.signature = 0x4D42; // "BM"
-    header.fileSize = fileSize;
-    header.reserved = 0;
-    header.dataOffset = sizeof(BMPHeader);
-    header.headerSize = 40;
-    header.width = width;
-    header.height = height;
-    header.planes = 1;
-    header.bitDepth = 1;
-    header.compression = 0;
-    header.imageSize = dataSize;
-    header.xResolution = 0;
-    header.yResolution = 0;
-    header.colorsUsed = 0;
-    header.colorsImportant = 0;
-
-    // 写入BMP文件头
-    fwrite(&header, sizeof(BMPHeader), 1, file);
-
-    // 写入图像数据
-    fwrite(image, dataSize, 1, file);
-
-    fclose(file);
-    printf("图像保存成功: %s\n", filename);
-    return 0;
 }

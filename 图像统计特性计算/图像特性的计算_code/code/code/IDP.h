@@ -37,10 +37,12 @@ void RmwExtractRiceEdge(uint8_t* pGryImg, uint8_t* pTmpImg, int width, int heigh
 //void displayHistogram(const int* histogram, int size, double a, double b, double c);//显示直方图
 double Median(const int* histogram, int width, int height);//求中值
 void printList(struct Node* head);//打印链表
-struct Node* insertAtEnd(struct Node* head, int value);//在链表尾部插入节点
-uint8_t* readBinaryBMP(const char* filename, int* width, int* height);//读取二值图像的BMP文件
+void insertAtEnd(struct Node* head, int value);//在链表尾部插入节点
+//uint8_t* readBinaryBMP(const char* filename, int* width, int* height);//读取二值图像的BMP文件
 uint8_t* read1BitBMP(const char* filename, int* width, int* height);//读取1位图像的BMP文件
-int save1BitBMP(const char* filename, uint8_t* image, int width, int height);//写入一位bmp
+//int save1BitBMP(const char* filename, uint8_t* image, int width, int height);//写入一位bmp
+struct Node* ChainCode(uint8_t* image, int width, int height);//链码算法
+
 
 struct Node {
     int data;          // 节点存储的数据

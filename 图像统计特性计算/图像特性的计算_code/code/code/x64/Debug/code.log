@@ -1,6 +1,17 @@
-﻿  ChainCode.c
+﻿  Chain.c
   IDP.c
+  正在生成代码...
 E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(236,18): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
 E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(259,5): warning C4013: “memset”未定义；假设外部返回 int
-  正在生成代码...
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(1075,32): warning C4028: 形参 1 与声明不同
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(1106,13): warning C4047: “return”:“int”与“Node **”的间接级别不同
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(1163,13): warning C4047: “return”:“int”与“Node **”的间接级别不同
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(1219,13): warning C4047: “return”:“int”与“Node **”的间接级别不同
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(1275,13): warning C4047: “return”:“int”与“Node **”的间接级别不同
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(1331,13): warning C4047: “return”:“int”与“Node **”的间接级别不同
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(1387,13): warning C4047: “return”:“int”与“Node **”的间接级别不同
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(1443,13): warning C4047: “return”:“int”与“Node **”的间接级别不同
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(1499,13): warning C4047: “return”:“int”与“Node **”的间接级别不同
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(1590,21): warning C4013: “memcpy”未定义；假设外部返回 int
+E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\code\IDP.c(1552,1): warning C4715: “generateChainCode”: 不是所有的控件路径都返回值
   code.vcxproj -> E:\code\IDP-Learning-Journey\图像统计特性计算\图像特性的计算_code\code\x64\Debug\code.exe
